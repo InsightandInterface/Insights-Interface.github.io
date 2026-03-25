@@ -1,0 +1,44 @@
+/* style.css */
+body {
+    background-color: #020617;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: none;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.glass {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease;
+}
+
+/* Specific Work Section Shadows */
+#work .glass:hover {
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
+    transform: translateY(-5px);
+}
